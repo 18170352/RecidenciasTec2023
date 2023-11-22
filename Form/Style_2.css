@@ -1,0 +1,294 @@
+/* Variables CSS */
+:root {
+    --primary-bg: #fdd;
+    --primary-border: #f00;
+    --secondary-bg: #ffd;
+    --secondary-border: #ff0;
+    --status-bg-ready: #e7f1c3;
+    --status-border-ready: #aea;
+    --status-bg-draft: #f3f2aa;
+    --status-border-draft: #ee2;
+    --criterion-border: #ddd;
+    --even-bg: #f0f0f0;
+    --placeholder-color: #aaa;
+  }
+  
+  /* Común para .gradingform_guide-regrade y .gradingform_guide-restored */
+  .gradingform_guide-regrade,
+  .gradingform_guide-restored {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .gradingform_guide-regrade {
+    background: var(--primary-bg);
+    border: 1px solid var(--primary-border);
+  }
+  
+  .gradingform_guide-restored {
+    background: var(--secondary-bg);
+    border: 1px solid var(--secondary-border);
+  }
+  
+  .gradingform_guide-error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Común para .gradingform_guide_editform .status.ready y .gradingform_guide_editform .status.draft */
+  .gradingform_guide_editform .status {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 60%;
+    padding: 0.25em;
+    border: 1px solid #eee;
+  }
+  
+  .gradingform_guide_editform .status.ready {
+    background-color: var(--status-bg-ready);
+    border-color: var(--status-border-ready);
+  }
+  
+  .gradingform_guide_editform .status.draft {
+    background-color: var(--status-bg-draft);
+    border-color: var(--status-border-draft);
+  }
+  
+  /* Simplifica las selecciones de clases */
+  .gradingform_guide.editor .criterion .controls,
+  .gradingform_guide .criterion .description,
+  .gradingform_guide .criterion .remark,
+  .gradingform_guide.editor .criterion .description .criterionmaxscore input {
+    vertical-align: top;
+    padding: 3px;
+  }
+  
+  .gradingform_guide .criteria {
+    height: 100%;
+  }
+  
+  .gradingform_guide .criterion {
+    border: 1px solid var(--criterion-border);
+    overflow: hidden;
+  }
+  
+  .gradingform_guide .criterion.even {
+    background: var(--even-bg);
+  }
+  
+  .gradingform_guide .criterion .description {
+    width: 100%;
+  }
+  
+  .gradingform_guide .criterion .description .criterionname {
+    font-weight: bold;
+  }
+  
+  .gradingform_guide .criterion label {
+    font-weight: bold;
+    padding-right: 5px;
+  }
+  
+  .gradingform_guide .plainvalue.empty {
+    font-style: italic;
+    color: var(--placeholder-color);
+  }
+
+  /* Estilo común para .gradingform_guide .plainvalue.editname y .gradingform_guide.editor .criterion .controls .delete input */
+.gradingform_guide .plainvalue.editname,
+.gradingform_guide.editor .criterion .controls .delete input {
+    font-weight: bold;
+}
+
+/* Ocultar botones 'Move up' y 'Move down' en casos específicos */
+.gradingform_guide.editor .criterion.first .controls .moveup input,
+.gradingform_guide.editor .criterion.last .controls .movedown input {
+    display: none;
+}
+
+/* Reemplazar botones con imágenes */
+.gradingform_guide.editor .delete input,
+.gradingform_guide.editor .moveup input,
+.gradingform_guide.editor .movedown input,
+.gradingform_guide.editor .addcriterion input,
+.gradingform_guide.editor .addcomment input {
+    text-indent: -1000em;
+    cursor: pointer;
+    border: none;
+    margin-top: 4px;
+}
+
+/* Estilo para los botones específicos */
+.gradingform_guide.editor .delete input,
+.gradingform_guide.editor .moveup input,
+.gradingform_guide.editor .movedown input {
+    width: 20px;
+    height: 15px;
+    background: transparent no-repeat center top;
+}
+
+.gradingform_guide.editor .delete input {
+    background-image: url([[pix:t/delete]]);
+}
+
+.gradingform_guide.editor .moveup input {
+    background-image: url([[pix:t/up]]);
+}
+
+.gradingform_guide.editor .movedown input {
+    background-image: url([[pix:t/down]]);
+}
+
+/* Estilo para botones 'Add Criterion' y 'Add Comment' */
+.gradingform_guide.editor .addcriterion input,
+.gradingform_guide.editor .addcomment input {
+    background: transparent no-repeat;
+    display: block;
+    color: #555;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.gradingform_guide.editor .addcriterion input {
+    background-image: url([[pix:t/add]]);
+    /* Agrega otros estilos específicos si es necesario */
+}
+
+.gradingform_guide.editor .addcomment input {
+    background-image: url([[pix:t/add]]);
+    /* Agrega otros estilos específicos si es necesario */
+}
+
+/* Estilo común para .gradingform_guide.editor .addcriterion input y .gradingform_guide.editor .addcomment input */
+.gradingform_guide.editor .addcriterion input,
+.gradingform_guide.editor .addcomment input {
+    background-position: left 5px top 8px;
+    height: 30px;
+    line-height: 29px;
+    margin-bottom: 14px;
+    padding: 0 10px 0 20px; /* Simplificar el relleno */
+}
+
+/* Estilo para .gradingform_guide .options .optionsheading */
+.gradingform_guide .options .optionsheading {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+/* Estilo para .gradingform_guide .options .option */
+.gradingform_guide .options .option {
+    padding-bottom: 2px;
+}
+
+/* Estilo para .gradingform_guide .options .option label */
+.gradingform_guide .options .option label {
+    margin-left: 5px;
+}
+
+/* Estilo para .gradingform_guide .options .option .value */
+.gradingform_guide .options .option .value {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para .gradingform_guide .criterion .description.error */
+.gradingform_guide .criterion .description.error {
+    background: #fdd;
+}
+
+/* Clases especiales para elementos creados por guideeditor.js */
+.gradingform_guide.editor .hiddenelement {
+    display: none;
+}
+
+.gradingform_guide.editor .pseudotablink {
+    background-color: transparent;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    color: transparent;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    float: right;
+}
+
+/* Estilo para .jsenabled .gradingform_guide .markingguidecomment */
+.jsenabled .gradingform_guide .markingguidecomment {
+    cursor: pointer;
+}
+
+/* Estilo para .jsenabled .gradingform_guide .markingguidecomment:before */
+.jsenabled .gradingform_guide .markingguidecomment:before {
+    content: url([[pix:t/add]]);
+    padding-right: 2px;
+}
+
+/* Estilo para .gradingform_guide .commentheader */
+.gradingform_guide .commentheader {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+/* Estilo para .jsenabled .gradingform_guide .criterionnamelabel */
+.jsenabled .gradingform_guide .criterionnamelabel {
+    display: none;
+}
+
+/* Estilo para .jsenabled .gradingform_guide .criterionshortname */
+.jsenabled .gradingform_guide .criterionshortname {
+    font-weight: bold;
+}
+
+/* Estilo para .gradingform_guide table */
+.gradingform_guide table {
+    width: 100%;
+}
+
+/* Estilo para .gradingform_guide .descriptionreadonly */
+.gradingform_guide .descriptionreadonly {
+    vertical-align: top;
+}
+
+/* Estilo para .gradingform_guide .criteriondescriptionmarkers */
+.gradingform_guide .criteriondescriptionmarkers {
+    width: 300px;
+}
+
+/* Estilo para .gradingform_guide .markingguideremark */
+.gradingform_guide .markingguideremark {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para .gradingform_guide .criteriondescriptionscore */
+.gradingform_guide .criteriondescriptionscore {
+    display: inline;
+}
+
+/* Estilo para .gradingform_guide .score label */
+.gradingform_guide .score label {
+    display: block;
+}
+
+/* Estilo para .gradingform_guide .score input */
+.gradingform_guide .score input {
+    margin: 0;
+    width: auto;
+}
+
+/* Estilo para .gradingform_guide_comment_chooser */
+.gradingform_guide_comment_chooser {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Estilo para .gradingform_guide-frequent-comments */
+.gradingform_guide-frequent-comments {
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
